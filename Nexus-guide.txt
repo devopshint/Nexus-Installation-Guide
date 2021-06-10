@@ -10,7 +10,7 @@ sudo apt install openjdk-8-jre-headless
 cd /opt
 sudo wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
 tar -zxvf latest-unix.tar.gz 
-sudo mv /opt/ nexus-3.28.1-01 /opt/nexus
+sudo mv /opt/nexus-3.30.1-01 /opt/nexus
 
 4.	Lets create NEXUS user and then grant sudo privileges to manage services.
 sudo adduser nexus
@@ -67,7 +67,7 @@ Restart=on-abort
 WantedBy=multi-user.target
 
 10.	Set limits by editing sysctl configuration file.
-sudo sudo /etc/sysctl.conf 
+sudo nano/etc/sysctl.conf 
 
 Add below line
 fs.file-max = 2097152
